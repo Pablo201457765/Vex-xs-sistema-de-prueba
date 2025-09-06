@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>VXS Final 5 - Flat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Boot -->
+<div id="boot" class="screen">
+  <div class="boot-inner">
+    <h1 class="logo">VEX-XS</h1>
+    <p class="sub">iniciando…</p>
+  </div>
+</div>
+
+<!-- Transición -->
+<div id="boot-transition" class="screen hidden"></div>
+
+<!-- Lock -->
+<div id="lock" class="screen hidden">
+  <div id="lockTime" class="bigtime">12:00</div>
+  <div id="lockDate" class="date">—</div>
+  <div class="hint">Desliza hacia arriba para desbloquear</div>
+  <div class="gesture"></div>
+</div>
+
+<!-- Home -->
+<div id="home" class="screen hidden">
+  <div class="status"><span id="homeClock">12:00</span></div>
+
+  <main id="grid">
+    <button class="app" data-app="settings"><img class="icon" id="icon-settings" src="config.png"><span>Configuración</span></button>
+    <button class="app" data-app="phone"><img class="icon" id="icon-phone" src="phone.png"><span>Teléfono</span></button>
+    <button class="app" data-app="gallery"><img class="icon" id="icon-gallery" src="gallery.png"><span>Galería</span></button>
+    <button class="app" data-app="notes"><img class="icon" id="icon-notes" src="notes.png"><span>Notas</span></button>
+    <button class="app" data-app="messages"><img class="icon" id="icon-messages" src="messages.png"><span>Mensajes</span></button>
+    <button class="app" data-app="browser"><img class="icon" id="icon-browser" src="browser.png"><span>Navegador</span></button>
+  </main>
+
+  <!-- Dock favorito (fijo) -->
+  <nav id="dock">
+    <button class="app" data-app="phone"><img class="icon" src="phone.png"></button>
+    <button class="app" data-app="gallery"><img class="icon" src="gallery.png"></button>
+    <button class="app" data-app="notes"><img class="icon" src="notes.png"></button>
+    <button class="app" data-app="messages"><img class="icon" src="messages.png"></button>
+    <button class="app" data-app="browser"><img class="icon" src="browser.png"></button>
+  </nav>
+
+  <div class="gesture small"></div>
+</div>
+
+<!-- App window overlay -->
+<section id="appWindow" class="screen overlay hidden" aria-hidden="true">
+  <div id="appContent"></div>
+  <div class="gesture small"></div>
+</section>
+
+<script src="app.js" defer></script>
+</body>
+</html>
