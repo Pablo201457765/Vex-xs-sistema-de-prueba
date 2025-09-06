@@ -1,0 +1,30 @@
+:root{ --speed:1; }
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{height:100%;margin:0;font-family:system-ui,Roboto,Arial;background:#111;color:#fff;}
+.screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hidden{display:none;}
+.logo{font-size:2.4rem;animation:glow calc(2s/var(--speed)) infinite alternate;}
+@keyframes glow{from{opacity:.6;text-shadow:0 0 6px #9ff}to{opacity:1;text-shadow:0 0 18px #fff}}
+#boot{background:#000;}
+#boot-transition{background:radial-gradient(120% 120% at 50% 50%, #fff 0%, #b4ffca 50%, #a0ffbe 100%);opacity:0;transition:opacity .6s ease;}
+/* Lock */
+#lock{background:#070707;flex-direction:column;}
+.bigtime{font-size:3rem;margin-top:12vh;}
+.date{opacity:.85;margin-top:.5rem;}
+.hint{position:absolute;bottom:120px;opacity:.7;}
+.gesture{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);width:100px;height:6px;border-radius:6px;background:#999;}
+.gesture.small{bottom:20px;height:6px;}
+/* Home */
+#home{background:linear-gradient(180deg,#f8fff8 0%,#eaffef 40%,#ffffff 100%);flex-direction:column;}
+.status{position:absolute;top:18px;left:50%;transform:translateX(-50%);font-weight:600;}
+#grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:90vw;max-width:420px;padding:80px 12px 140px;}
+.app{background:transparent;border:0;color:#fff;display:flex;flex-direction:column;align-items:center;gap:.4rem;}
+.icon{width:64px;height:64px;border-radius:50%;background:#fff;object-fit:cover;}
+#dock{position:absolute;bottom:84px;left:50%;transform:translateX(-50%);width:92vw;max-width:420px;display:flex;justify-content:space-between;padding:10px;border-radius:18px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);}
+.overlay{background:#fff;color:#111;transform:translateY(100%);transition:transform calc(320ms/var(--speed)) cubic-bezier(.2,.8,.2,1);}
+.overlay.active{transform:translateY(0);}
+#appContent{padding:18px;flex:1;overflow:auto;}
+@media(min-width:520px){
+  body{display:flex;align-items:center;justify-content:center;}
+  .screen{max-width:420px;height:100vh;left:50%;transform:translateX(-50%);}
+}
