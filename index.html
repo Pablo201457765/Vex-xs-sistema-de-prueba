@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BetzXS Ultimate - v1.200.50 Beta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bootAudio" src="boot.wav"></audio>
+
+<!-- Boot screen -->
+<div id="boot" class="screen">
+  <div class="boot-inner">
+    <div id="logo" class="glow">BETZ<span>XS</span></div>
+    <div id="bootSub">Iniciando...</div>
+  </div>
+</div>
+
+<!-- Lock screen -->
+<div id="lock" class="screen hidden">
+  <div id="lockTop" class="status-bar">
+    <div class="left">Operador</div>
+    <div class="right"><span id="wifi">Wi‑Fi</span> • <span id="cell">4G</span> • <span id="battery">85%</span></div>
+  </div>
+  <div id="lockCenter">
+    <div id="time">00:00</div>
+    <div id="date">—</div>
+    <div class="hint">Desliza hacia arriba para desbloquear</div>
+  </div>
+  <div id="longPressArea" class="long-press">Mantén 20s para apagar</div>
+</div>
+
+<!-- Home -->
+<div id="home" class="screen hidden">
+  <div class="status-bar">
+    <div class="left">Operadora</div>
+    <div class="right"><span id="wifi2">Wi‑Fi</span> • <span id="cell2">4G</span> • <span id="battery2">85%</span></div>
+  </div>
+
+  <main id="grid">
+    <button class="app big" data-app="settings"><img src="icon_settings.png"><span>Configuración</span></button>
+    <div class="row">
+      <button class="app" data-app="phone"><img src="icon_phone.png"><span>Teléfono</span></button>
+      <button class="app" data-app="gallery"><img src="icon_gallery.png"><span>Galería</span></button>
+      <button class="app" data-app="notes"><img src="icon_notes.png"><span>Notas</span></button>
+      <button class="app" data-app="messages"><img src="icon_messages.png"><span>Mensajes</span></button>
+    </div>
+  </main>
+
+  <nav id="dock">
+    <button class="app" data-app="phone"><img src="icon_phone.png"></button>
+    <button class="app" data-app="gallery"><img src="icon_gallery.png"></button>
+    <button class="app" data-app="notes"><img src="icon_notes.png"></button>
+    <button class="app" data-app="messages"><img src="icon_messages.png"></button>
+  </nav>
+</div>
+
+<!-- Quick settings panel (slide down) -->
+<div id="quick" class="overlay hidden">
+  <div class="qs-grid">
+    <button class="qs" data-toggle="airplane">🛩️ Avión</button>
+    <button class="qs" data-toggle="wifi">📶 Wi‑Fi</button>
+    <button class="qs" data-toggle="data">📡 Datos</button>
+    <div class="qs-slider"><label>Brillo</label><input id="brillo" type="range" min="0" max="100" value="80"></div>
+    <div class="qs-slider"><label>Volumen</label><input id="vol" type="range" min="0" max="100" value="80"></div>
+    <button class="qs" id="powerBtn">⏻ Apagar</button>
+  </div>
+</div>
+
+<!-- App overlay -->
+<section id="appWindow" class="screen overlay hidden" aria-hidden="true">
+  <div id="appContent"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
