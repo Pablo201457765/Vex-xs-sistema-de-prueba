@@ -1,0 +1,927 @@
+
+/* style.css - heavy, production-like styles with many animations and fallbacks */
+:root{--bg:#06120f;--accent:#6ef0c9;--muted:rgba(255,255,255,0.06)}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#fff;overflow:hidden}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column}
+.boot-screen{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#031014,#082428)}
+.hidden{display:none!important;opacity:0}
+.boot-inner{text-align:center}
+.logo-anim svg{filter:drop-shadow(0 8px 20px rgba(0,0,0,.6))}
+.boot-title{font-size:96px;font-weight:800;color:var(--accent);text-shadow:0 0 30px rgba(110,240,201,.3)}
+.boot-dots span{opacity:0;display:inline-block;margin:0 4px;font-size:36px}
+.lock-screen{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.status{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:linear-gradient(0deg,rgba(0,0,0,.15),transparent)}
+.big-time{font-size:52px;font-weight:700;margin-bottom:6px}
+.widgets{display:flex;flex-wrap:wrap;gap:12px;padding:18px;justify-content:center}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:12px;width:260px}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:12px;padding:12px 18px}
+.app-tile{background:transparent;border:0;color:inherit;display:flex;flex-direction:column;align-items:center;padding:8px;border-radius:12px;cursor:pointer}
+.app-svg{width:56px;height:56px;fill:rgba(255,255,255,0.9);opacity:0.95;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.app-tile span{font-size:11px;margin-top:6px}
+
+@keyframes float1{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float1{animation:float1 4s ease-in-out infinite}
+@keyframes float2{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float2{animation:float2 5s ease-in-out infinite}
+@keyframes float3{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float3{animation:float3 3s ease-in-out infinite}
+@keyframes float4{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float4{animation:float4 4s ease-in-out infinite}
+@keyframes float5{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float5{animation:float5 5s ease-in-out infinite}
+@keyframes float6{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float6{animation:float6 3s ease-in-out infinite}
+@keyframes float7{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float7{animation:float7 4s ease-in-out infinite}
+@keyframes float8{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float8{animation:float8 5s ease-in-out infinite}
+@keyframes float9{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float9{animation:float9 3s ease-in-out infinite}
+@keyframes float10{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float10{animation:float10 4s ease-in-out infinite}
+@keyframes float11{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float11{animation:float11 5s ease-in-out infinite}
+@keyframes float12{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float12{animation:float12 3s ease-in-out infinite}
+@keyframes float13{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float13{animation:float13 4s ease-in-out infinite}
+@keyframes float14{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float14{animation:float14 5s ease-in-out infinite}
+@keyframes float15{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float15{animation:float15 3s ease-in-out infinite}
+@keyframes float16{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float16{animation:float16 4s ease-in-out infinite}
+@keyframes float17{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float17{animation:float17 5s ease-in-out infinite}
+@keyframes float18{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float18{animation:float18 3s ease-in-out infinite}
+@keyframes float19{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float19{animation:float19 4s ease-in-out infinite}
+@keyframes float20{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float20{animation:float20 5s ease-in-out infinite}
+@keyframes float21{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float21{animation:float21 3s ease-in-out infinite}
+@keyframes float22{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float22{animation:float22 4s ease-in-out infinite}
+@keyframes float23{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float23{animation:float23 5s ease-in-out infinite}
+@keyframes float24{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float24{animation:float24 3s ease-in-out infinite}
+@keyframes float25{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float25{animation:float25 4s ease-in-out infinite}
+@keyframes float26{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float26{animation:float26 5s ease-in-out infinite}
+@keyframes float27{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float27{animation:float27 3s ease-in-out infinite}
+@keyframes float28{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float28{animation:float28 4s ease-in-out infinite}
+@keyframes float29{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float29{animation:float29 5s ease-in-out infinite}
+@keyframes float30{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float30{animation:float30 3s ease-in-out infinite}
+@keyframes float31{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float31{animation:float31 4s ease-in-out infinite}
+@keyframes float32{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float32{animation:float32 5s ease-in-out infinite}
+@keyframes float33{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float33{animation:float33 3s ease-in-out infinite}
+@keyframes float34{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float34{animation:float34 4s ease-in-out infinite}
+@keyframes float35{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float35{animation:float35 5s ease-in-out infinite}
+@keyframes float36{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float36{animation:float36 3s ease-in-out infinite}
+@keyframes float37{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float37{animation:float37 4s ease-in-out infinite}
+@keyframes float38{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float38{animation:float38 5s ease-in-out infinite}
+@keyframes float39{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float39{animation:float39 3s ease-in-out infinite}
+@keyframes float40{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float40{animation:float40 4s ease-in-out infinite}
+@keyframes float41{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float41{animation:float41 5s ease-in-out infinite}
+@keyframes float42{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float42{animation:float42 3s ease-in-out infinite}
+@keyframes float43{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float43{animation:float43 4s ease-in-out infinite}
+@keyframes float44{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float44{animation:float44 5s ease-in-out infinite}
+@keyframes float45{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float45{animation:float45 3s ease-in-out infinite}
+@keyframes float46{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float46{animation:float46 4s ease-in-out infinite}
+@keyframes float47{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float47{animation:float47 5s ease-in-out infinite}
+@keyframes float48{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float48{animation:float48 3s ease-in-out infinite}
+@keyframes float49{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float49{animation:float49 4s ease-in-out infinite}
+@keyframes float50{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float50{animation:float50 5s ease-in-out infinite}
+@keyframes float51{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float51{animation:float51 3s ease-in-out infinite}
+@keyframes float52{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float52{animation:float52 4s ease-in-out infinite}
+@keyframes float53{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float53{animation:float53 5s ease-in-out infinite}
+@keyframes float54{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float54{animation:float54 3s ease-in-out infinite}
+@keyframes float55{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float55{animation:float55 4s ease-in-out infinite}
+@keyframes float56{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float56{animation:float56 5s ease-in-out infinite}
+@keyframes float57{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float57{animation:float57 3s ease-in-out infinite}
+@keyframes float58{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float58{animation:float58 4s ease-in-out infinite}
+@keyframes float59{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float59{animation:float59 5s ease-in-out infinite}
+@keyframes float60{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float60{animation:float60 3s ease-in-out infinite}
+@keyframes float61{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float61{animation:float61 4s ease-in-out infinite}
+@keyframes float62{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float62{animation:float62 5s ease-in-out infinite}
+@keyframes float63{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float63{animation:float63 3s ease-in-out infinite}
+@keyframes float64{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float64{animation:float64 4s ease-in-out infinite}
+@keyframes float65{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float65{animation:float65 5s ease-in-out infinite}
+@keyframes float66{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float66{animation:float66 3s ease-in-out infinite}
+@keyframes float67{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float67{animation:float67 4s ease-in-out infinite}
+@keyframes float68{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float68{animation:float68 5s ease-in-out infinite}
+@keyframes float69{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float69{animation:float69 3s ease-in-out infinite}
+@keyframes float70{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float70{animation:float70 4s ease-in-out infinite}
+@keyframes float71{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float71{animation:float71 5s ease-in-out infinite}
+@keyframes float72{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float72{animation:float72 3s ease-in-out infinite}
+@keyframes float73{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float73{animation:float73 4s ease-in-out infinite}
+@keyframes float74{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float74{animation:float74 5s ease-in-out infinite}
+@keyframes float75{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float75{animation:float75 3s ease-in-out infinite}
+@keyframes float76{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float76{animation:float76 4s ease-in-out infinite}
+@keyframes float77{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float77{animation:float77 5s ease-in-out infinite}
+@keyframes float78{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float78{animation:float78 3s ease-in-out infinite}
+@keyframes float79{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float79{animation:float79 4s ease-in-out infinite}
+@keyframes float80{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float80{animation:float80 5s ease-in-out infinite}
+@keyframes float81{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float81{animation:float81 3s ease-in-out infinite}
+@keyframes float82{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float82{animation:float82 4s ease-in-out infinite}
+@keyframes float83{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float83{animation:float83 5s ease-in-out infinite}
+@keyframes float84{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float84{animation:float84 3s ease-in-out infinite}
+@keyframes float85{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float85{animation:float85 4s ease-in-out infinite}
+@keyframes float86{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float86{animation:float86 5s ease-in-out infinite}
+@keyframes float87{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float87{animation:float87 3s ease-in-out infinite}
+@keyframes float88{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float88{animation:float88 4s ease-in-out infinite}
+@keyframes float89{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float89{animation:float89 5s ease-in-out infinite}
+@keyframes float90{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float90{animation:float90 3s ease-in-out infinite}
+@keyframes float91{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float91{animation:float91 4s ease-in-out infinite}
+@keyframes float92{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float92{animation:float92 5s ease-in-out infinite}
+@keyframes float93{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float93{animation:float93 3s ease-in-out infinite}
+@keyframes float94{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float94{animation:float94 4s ease-in-out infinite}
+@keyframes float95{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float95{animation:float95 5s ease-in-out infinite}
+@keyframes float96{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float96{animation:float96 3s ease-in-out infinite}
+@keyframes float97{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float97{animation:float97 4s ease-in-out infinite}
+@keyframes float98{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float98{animation:float98 5s ease-in-out infinite}
+@keyframes float99{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float99{animation:float99 3s ease-in-out infinite}
+@keyframes float100{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float100{animation:float100 4s ease-in-out infinite}
+@keyframes float101{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float101{animation:float101 5s ease-in-out infinite}
+@keyframes float102{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float102{animation:float102 3s ease-in-out infinite}
+@keyframes float103{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float103{animation:float103 4s ease-in-out infinite}
+@keyframes float104{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float104{animation:float104 5s ease-in-out infinite}
+@keyframes float105{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float105{animation:float105 3s ease-in-out infinite}
+@keyframes float106{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float106{animation:float106 4s ease-in-out infinite}
+@keyframes float107{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float107{animation:float107 5s ease-in-out infinite}
+@keyframes float108{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float108{animation:float108 3s ease-in-out infinite}
+@keyframes float109{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float109{animation:float109 4s ease-in-out infinite}
+@keyframes float110{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float110{animation:float110 5s ease-in-out infinite}
+@keyframes float111{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float111{animation:float111 3s ease-in-out infinite}
+@keyframes float112{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float112{animation:float112 4s ease-in-out infinite}
+@keyframes float113{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float113{animation:float113 5s ease-in-out infinite}
+@keyframes float114{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float114{animation:float114 3s ease-in-out infinite}
+@keyframes float115{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float115{animation:float115 4s ease-in-out infinite}
+@keyframes float116{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float116{animation:float116 5s ease-in-out infinite}
+@keyframes float117{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float117{animation:float117 3s ease-in-out infinite}
+@keyframes float118{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float118{animation:float118 4s ease-in-out infinite}
+@keyframes float119{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float119{animation:float119 5s ease-in-out infinite}
+@keyframes float120{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float120{animation:float120 3s ease-in-out infinite}
+@keyframes float121{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float121{animation:float121 4s ease-in-out infinite}
+@keyframes float122{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float122{animation:float122 5s ease-in-out infinite}
+@keyframes float123{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float123{animation:float123 3s ease-in-out infinite}
+@keyframes float124{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float124{animation:float124 4s ease-in-out infinite}
+@keyframes float125{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float125{animation:float125 5s ease-in-out infinite}
+@keyframes float126{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float126{animation:float126 3s ease-in-out infinite}
+@keyframes float127{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float127{animation:float127 4s ease-in-out infinite}
+@keyframes float128{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float128{animation:float128 5s ease-in-out infinite}
+@keyframes float129{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float129{animation:float129 3s ease-in-out infinite}
+@keyframes float130{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float130{animation:float130 4s ease-in-out infinite}
+@keyframes float131{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float131{animation:float131 5s ease-in-out infinite}
+@keyframes float132{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float132{animation:float132 3s ease-in-out infinite}
+@keyframes float133{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float133{animation:float133 4s ease-in-out infinite}
+@keyframes float134{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float134{animation:float134 5s ease-in-out infinite}
+@keyframes float135{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float135{animation:float135 3s ease-in-out infinite}
+@keyframes float136{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float136{animation:float136 4s ease-in-out infinite}
+@keyframes float137{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float137{animation:float137 5s ease-in-out infinite}
+@keyframes float138{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float138{animation:float138 3s ease-in-out infinite}
+@keyframes float139{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float139{animation:float139 4s ease-in-out infinite}
+@keyframes float140{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float140{animation:float140 5s ease-in-out infinite}
+@keyframes float141{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float141{animation:float141 3s ease-in-out infinite}
+@keyframes float142{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float142{animation:float142 4s ease-in-out infinite}
+@keyframes float143{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float143{animation:float143 5s ease-in-out infinite}
+@keyframes float144{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float144{animation:float144 3s ease-in-out infinite}
+@keyframes float145{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float145{animation:float145 4s ease-in-out infinite}
+@keyframes float146{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float146{animation:float146 5s ease-in-out infinite}
+@keyframes float147{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float147{animation:float147 3s ease-in-out infinite}
+@keyframes float148{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float148{animation:float148 4s ease-in-out infinite}
+@keyframes float149{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float149{animation:float149 5s ease-in-out infinite}
+@keyframes float150{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float150{animation:float150 3s ease-in-out infinite}
+@keyframes float151{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float151{animation:float151 4s ease-in-out infinite}
+@keyframes float152{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float152{animation:float152 5s ease-in-out infinite}
+@keyframes float153{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float153{animation:float153 3s ease-in-out infinite}
+@keyframes float154{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float154{animation:float154 4s ease-in-out infinite}
+@keyframes float155{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float155{animation:float155 5s ease-in-out infinite}
+@keyframes float156{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float156{animation:float156 3s ease-in-out infinite}
+@keyframes float157{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float157{animation:float157 4s ease-in-out infinite}
+@keyframes float158{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float158{animation:float158 5s ease-in-out infinite}
+@keyframes float159{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float159{animation:float159 3s ease-in-out infinite}
+@keyframes float160{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float160{animation:float160 4s ease-in-out infinite}
+@keyframes float161{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float161{animation:float161 5s ease-in-out infinite}
+@keyframes float162{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float162{animation:float162 3s ease-in-out infinite}
+@keyframes float163{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float163{animation:float163 4s ease-in-out infinite}
+@keyframes float164{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float164{animation:float164 5s ease-in-out infinite}
+@keyframes float165{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float165{animation:float165 3s ease-in-out infinite}
+@keyframes float166{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float166{animation:float166 4s ease-in-out infinite}
+@keyframes float167{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float167{animation:float167 5s ease-in-out infinite}
+@keyframes float168{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float168{animation:float168 3s ease-in-out infinite}
+@keyframes float169{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float169{animation:float169 4s ease-in-out infinite}
+@keyframes float170{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float170{animation:float170 5s ease-in-out infinite}
+@keyframes float171{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float171{animation:float171 3s ease-in-out infinite}
+@keyframes float172{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float172{animation:float172 4s ease-in-out infinite}
+@keyframes float173{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float173{animation:float173 5s ease-in-out infinite}
+@keyframes float174{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float174{animation:float174 3s ease-in-out infinite}
+@keyframes float175{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float175{animation:float175 4s ease-in-out infinite}
+@keyframes float176{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float176{animation:float176 5s ease-in-out infinite}
+@keyframes float177{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float177{animation:float177 3s ease-in-out infinite}
+@keyframes float178{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float178{animation:float178 4s ease-in-out infinite}
+@keyframes float179{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float179{animation:float179 5s ease-in-out infinite}
+@keyframes float180{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float180{animation:float180 3s ease-in-out infinite}
+@keyframes float181{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float181{animation:float181 4s ease-in-out infinite}
+@keyframes float182{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float182{animation:float182 5s ease-in-out infinite}
+@keyframes float183{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float183{animation:float183 3s ease-in-out infinite}
+@keyframes float184{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float184{animation:float184 4s ease-in-out infinite}
+@keyframes float185{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float185{animation:float185 5s ease-in-out infinite}
+@keyframes float186{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float186{animation:float186 3s ease-in-out infinite}
+@keyframes float187{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float187{animation:float187 4s ease-in-out infinite}
+@keyframes float188{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float188{animation:float188 5s ease-in-out infinite}
+@keyframes float189{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float189{animation:float189 3s ease-in-out infinite}
+@keyframes float190{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float190{animation:float190 4s ease-in-out infinite}
+@keyframes float191{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float191{animation:float191 5s ease-in-out infinite}
+@keyframes float192{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float192{animation:float192 3s ease-in-out infinite}
+@keyframes float193{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.float193{animation:float193 4s ease-in-out infinite}
+@keyframes float194{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.float194{animation:float194 5s ease-in-out infinite}
+@keyframes float195{0%{transform:translateY(0)}50%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.float195{animation:float195 3s ease-in-out infinite}
+@keyframes float196{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float196{animation:float196 4s ease-in-out infinite}
+@keyframes float197{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
+.float197{animation:float197 5s ease-in-out infinite}
+@keyframes float198{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.float198{animation:float198 3s ease-in-out infinite}
+@keyframes float199{0%{transform:translateY(0)}50%{transform:translateY(-11px)}100%{transform:translateY(0)}}
+.float199{animation:float199 4s ease-in-out infinite}
+@keyframes float200{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.float200{animation:float200 5s ease-in-out infinite}
+
+/* complex transitions */
+.app-open { animation: appOpen .42s cubic-bezier(.2,.8,.2,1) both; transform-origin:center top }
+@keyframes appOpen { from { transform: translateY(8%) scale(.96); opacity:0 } to { transform: translateY(0) scale(1); opacity:1 } }
+.app-close { animation: appClose .28s ease both }
+@keyframes appClose { from { transform: translateY(0) scale(1); opacity:1 } to { transform: translateY(6%) scale(.98); opacity:0 } }
+.ui-block-1{padding:1px;margin:3px;border-radius:3px}
+.ui-block-2{padding:2px;margin:6px;border-radius:4px}
+.ui-block-3{padding:3px;margin:9px;border-radius:5px}
+.ui-block-4{padding:4px;margin:2px;border-radius:6px}
+.ui-block-5{padding:5px;margin:5px;border-radius:7px}
+.ui-block-6{padding:6px;margin:8px;border-radius:2px}
+.ui-block-7{padding:7px;margin:1px;border-radius:3px}
+.ui-block-8{padding:8px;margin:4px;border-radius:4px}
+.ui-block-9{padding:9px;margin:7px;border-radius:5px}
+.ui-block-10{padding:10px;margin:0px;border-radius:6px}
+.ui-block-11{padding:11px;margin:3px;border-radius:7px}
+.ui-block-12{padding:0px;margin:6px;border-radius:2px}
+.ui-block-13{padding:1px;margin:9px;border-radius:3px}
+.ui-block-14{padding:2px;margin:2px;border-radius:4px}
+.ui-block-15{padding:3px;margin:5px;border-radius:5px}
+.ui-block-16{padding:4px;margin:8px;border-radius:6px}
+.ui-block-17{padding:5px;margin:1px;border-radius:7px}
+.ui-block-18{padding:6px;margin:4px;border-radius:2px}
+.ui-block-19{padding:7px;margin:7px;border-radius:3px}
+.ui-block-20{padding:8px;margin:0px;border-radius:4px}
+.ui-block-21{padding:9px;margin:3px;border-radius:5px}
+.ui-block-22{padding:10px;margin:6px;border-radius:6px}
+.ui-block-23{padding:11px;margin:9px;border-radius:7px}
+.ui-block-24{padding:0px;margin:2px;border-radius:2px}
+.ui-block-25{padding:1px;margin:5px;border-radius:3px}
+.ui-block-26{padding:2px;margin:8px;border-radius:4px}
+.ui-block-27{padding:3px;margin:1px;border-radius:5px}
+.ui-block-28{padding:4px;margin:4px;border-radius:6px}
+.ui-block-29{padding:5px;margin:7px;border-radius:7px}
+.ui-block-30{padding:6px;margin:0px;border-radius:2px}
+.ui-block-31{padding:7px;margin:3px;border-radius:3px}
+.ui-block-32{padding:8px;margin:6px;border-radius:4px}
+.ui-block-33{padding:9px;margin:9px;border-radius:5px}
+.ui-block-34{padding:10px;margin:2px;border-radius:6px}
+.ui-block-35{padding:11px;margin:5px;border-radius:7px}
+.ui-block-36{padding:0px;margin:8px;border-radius:2px}
+.ui-block-37{padding:1px;margin:1px;border-radius:3px}
+.ui-block-38{padding:2px;margin:4px;border-radius:4px}
+.ui-block-39{padding:3px;margin:7px;border-radius:5px}
+.ui-block-40{padding:4px;margin:0px;border-radius:6px}
+.ui-block-41{padding:5px;margin:3px;border-radius:7px}
+.ui-block-42{padding:6px;margin:6px;border-radius:2px}
+.ui-block-43{padding:7px;margin:9px;border-radius:3px}
+.ui-block-44{padding:8px;margin:2px;border-radius:4px}
+.ui-block-45{padding:9px;margin:5px;border-radius:5px}
+.ui-block-46{padding:10px;margin:8px;border-radius:6px}
+.ui-block-47{padding:11px;margin:1px;border-radius:7px}
+.ui-block-48{padding:0px;margin:4px;border-radius:2px}
+.ui-block-49{padding:1px;margin:7px;border-radius:3px}
+.ui-block-50{padding:2px;margin:0px;border-radius:4px}
+.ui-block-51{padding:3px;margin:3px;border-radius:5px}
+.ui-block-52{padding:4px;margin:6px;border-radius:6px}
+.ui-block-53{padding:5px;margin:9px;border-radius:7px}
+.ui-block-54{padding:6px;margin:2px;border-radius:2px}
+.ui-block-55{padding:7px;margin:5px;border-radius:3px}
+.ui-block-56{padding:8px;margin:8px;border-radius:4px}
+.ui-block-57{padding:9px;margin:1px;border-radius:5px}
+.ui-block-58{padding:10px;margin:4px;border-radius:6px}
+.ui-block-59{padding:11px;margin:7px;border-radius:7px}
+.ui-block-60{padding:0px;margin:0px;border-radius:2px}
+.ui-block-61{padding:1px;margin:3px;border-radius:3px}
+.ui-block-62{padding:2px;margin:6px;border-radius:4px}
+.ui-block-63{padding:3px;margin:9px;border-radius:5px}
+.ui-block-64{padding:4px;margin:2px;border-radius:6px}
+.ui-block-65{padding:5px;margin:5px;border-radius:7px}
+.ui-block-66{padding:6px;margin:8px;border-radius:2px}
+.ui-block-67{padding:7px;margin:1px;border-radius:3px}
+.ui-block-68{padding:8px;margin:4px;border-radius:4px}
+.ui-block-69{padding:9px;margin:7px;border-radius:5px}
+.ui-block-70{padding:10px;margin:0px;border-radius:6px}
+.ui-block-71{padding:11px;margin:3px;border-radius:7px}
+.ui-block-72{padding:0px;margin:6px;border-radius:2px}
+.ui-block-73{padding:1px;margin:9px;border-radius:3px}
+.ui-block-74{padding:2px;margin:2px;border-radius:4px}
+.ui-block-75{padding:3px;margin:5px;border-radius:5px}
+.ui-block-76{padding:4px;margin:8px;border-radius:6px}
+.ui-block-77{padding:5px;margin:1px;border-radius:7px}
+.ui-block-78{padding:6px;margin:4px;border-radius:2px}
+.ui-block-79{padding:7px;margin:7px;border-radius:3px}
+.ui-block-80{padding:8px;margin:0px;border-radius:4px}
+.ui-block-81{padding:9px;margin:3px;border-radius:5px}
+.ui-block-82{padding:10px;margin:6px;border-radius:6px}
+.ui-block-83{padding:11px;margin:9px;border-radius:7px}
+.ui-block-84{padding:0px;margin:2px;border-radius:2px}
+.ui-block-85{padding:1px;margin:5px;border-radius:3px}
+.ui-block-86{padding:2px;margin:8px;border-radius:4px}
+.ui-block-87{padding:3px;margin:1px;border-radius:5px}
+.ui-block-88{padding:4px;margin:4px;border-radius:6px}
+.ui-block-89{padding:5px;margin:7px;border-radius:7px}
+.ui-block-90{padding:6px;margin:0px;border-radius:2px}
+.ui-block-91{padding:7px;margin:3px;border-radius:3px}
+.ui-block-92{padding:8px;margin:6px;border-radius:4px}
+.ui-block-93{padding:9px;margin:9px;border-radius:5px}
+.ui-block-94{padding:10px;margin:2px;border-radius:6px}
+.ui-block-95{padding:11px;margin:5px;border-radius:7px}
+.ui-block-96{padding:0px;margin:8px;border-radius:2px}
+.ui-block-97{padding:1px;margin:1px;border-radius:3px}
+.ui-block-98{padding:2px;margin:4px;border-radius:4px}
+.ui-block-99{padding:3px;margin:7px;border-radius:5px}
+.ui-block-100{padding:4px;margin:0px;border-radius:6px}
+.ui-block-101{padding:5px;margin:3px;border-radius:7px}
+.ui-block-102{padding:6px;margin:6px;border-radius:2px}
+.ui-block-103{padding:7px;margin:9px;border-radius:3px}
+.ui-block-104{padding:8px;margin:2px;border-radius:4px}
+.ui-block-105{padding:9px;margin:5px;border-radius:5px}
+.ui-block-106{padding:10px;margin:8px;border-radius:6px}
+.ui-block-107{padding:11px;margin:1px;border-radius:7px}
+.ui-block-108{padding:0px;margin:4px;border-radius:2px}
+.ui-block-109{padding:1px;margin:7px;border-radius:3px}
+.ui-block-110{padding:2px;margin:0px;border-radius:4px}
+.ui-block-111{padding:3px;margin:3px;border-radius:5px}
+.ui-block-112{padding:4px;margin:6px;border-radius:6px}
+.ui-block-113{padding:5px;margin:9px;border-radius:7px}
+.ui-block-114{padding:6px;margin:2px;border-radius:2px}
+.ui-block-115{padding:7px;margin:5px;border-radius:3px}
+.ui-block-116{padding:8px;margin:8px;border-radius:4px}
+.ui-block-117{padding:9px;margin:1px;border-radius:5px}
+.ui-block-118{padding:10px;margin:4px;border-radius:6px}
+.ui-block-119{padding:11px;margin:7px;border-radius:7px}
+.ui-block-120{padding:0px;margin:0px;border-radius:2px}
+.ui-block-121{padding:1px;margin:3px;border-radius:3px}
+.ui-block-122{padding:2px;margin:6px;border-radius:4px}
+.ui-block-123{padding:3px;margin:9px;border-radius:5px}
+.ui-block-124{padding:4px;margin:2px;border-radius:6px}
+.ui-block-125{padding:5px;margin:5px;border-radius:7px}
+.ui-block-126{padding:6px;margin:8px;border-radius:2px}
+.ui-block-127{padding:7px;margin:1px;border-radius:3px}
+.ui-block-128{padding:8px;margin:4px;border-radius:4px}
+.ui-block-129{padding:9px;margin:7px;border-radius:5px}
+.ui-block-130{padding:10px;margin:0px;border-radius:6px}
+.ui-block-131{padding:11px;margin:3px;border-radius:7px}
+.ui-block-132{padding:0px;margin:6px;border-radius:2px}
+.ui-block-133{padding:1px;margin:9px;border-radius:3px}
+.ui-block-134{padding:2px;margin:2px;border-radius:4px}
+.ui-block-135{padding:3px;margin:5px;border-radius:5px}
+.ui-block-136{padding:4px;margin:8px;border-radius:6px}
+.ui-block-137{padding:5px;margin:1px;border-radius:7px}
+.ui-block-138{padding:6px;margin:4px;border-radius:2px}
+.ui-block-139{padding:7px;margin:7px;border-radius:3px}
+.ui-block-140{padding:8px;margin:0px;border-radius:4px}
+.ui-block-141{padding:9px;margin:3px;border-radius:5px}
+.ui-block-142{padding:10px;margin:6px;border-radius:6px}
+.ui-block-143{padding:11px;margin:9px;border-radius:7px}
+.ui-block-144{padding:0px;margin:2px;border-radius:2px}
+.ui-block-145{padding:1px;margin:5px;border-radius:3px}
+.ui-block-146{padding:2px;margin:8px;border-radius:4px}
+.ui-block-147{padding:3px;margin:1px;border-radius:5px}
+.ui-block-148{padding:4px;margin:4px;border-radius:6px}
+.ui-block-149{padding:5px;margin:7px;border-radius:7px}
+.ui-block-150{padding:6px;margin:0px;border-radius:2px}
+.ui-block-151{padding:7px;margin:3px;border-radius:3px}
+.ui-block-152{padding:8px;margin:6px;border-radius:4px}
+.ui-block-153{padding:9px;margin:9px;border-radius:5px}
+.ui-block-154{padding:10px;margin:2px;border-radius:6px}
+.ui-block-155{padding:11px;margin:5px;border-radius:7px}
+.ui-block-156{padding:0px;margin:8px;border-radius:2px}
+.ui-block-157{padding:1px;margin:1px;border-radius:3px}
+.ui-block-158{padding:2px;margin:4px;border-radius:4px}
+.ui-block-159{padding:3px;margin:7px;border-radius:5px}
+.ui-block-160{padding:4px;margin:0px;border-radius:6px}
+.ui-block-161{padding:5px;margin:3px;border-radius:7px}
+.ui-block-162{padding:6px;margin:6px;border-radius:2px}
+.ui-block-163{padding:7px;margin:9px;border-radius:3px}
+.ui-block-164{padding:8px;margin:2px;border-radius:4px}
+.ui-block-165{padding:9px;margin:5px;border-radius:5px}
+.ui-block-166{padding:10px;margin:8px;border-radius:6px}
+.ui-block-167{padding:11px;margin:1px;border-radius:7px}
+.ui-block-168{padding:0px;margin:4px;border-radius:2px}
+.ui-block-169{padding:1px;margin:7px;border-radius:3px}
+.ui-block-170{padding:2px;margin:0px;border-radius:4px}
+.ui-block-171{padding:3px;margin:3px;border-radius:5px}
+.ui-block-172{padding:4px;margin:6px;border-radius:6px}
+.ui-block-173{padding:5px;margin:9px;border-radius:7px}
+.ui-block-174{padding:6px;margin:2px;border-radius:2px}
+.ui-block-175{padding:7px;margin:5px;border-radius:3px}
+.ui-block-176{padding:8px;margin:8px;border-radius:4px}
+.ui-block-177{padding:9px;margin:1px;border-radius:5px}
+.ui-block-178{padding:10px;margin:4px;border-radius:6px}
+.ui-block-179{padding:11px;margin:7px;border-radius:7px}
+.ui-block-180{padding:0px;margin:0px;border-radius:2px}
+.ui-block-181{padding:1px;margin:3px;border-radius:3px}
+.ui-block-182{padding:2px;margin:6px;border-radius:4px}
+.ui-block-183{padding:3px;margin:9px;border-radius:5px}
+.ui-block-184{padding:4px;margin:2px;border-radius:6px}
+.ui-block-185{padding:5px;margin:5px;border-radius:7px}
+.ui-block-186{padding:6px;margin:8px;border-radius:2px}
+.ui-block-187{padding:7px;margin:1px;border-radius:3px}
+.ui-block-188{padding:8px;margin:4px;border-radius:4px}
+.ui-block-189{padding:9px;margin:7px;border-radius:5px}
+.ui-block-190{padding:10px;margin:0px;border-radius:6px}
+.ui-block-191{padding:11px;margin:3px;border-radius:7px}
+.ui-block-192{padding:0px;margin:6px;border-radius:2px}
+.ui-block-193{padding:1px;margin:9px;border-radius:3px}
+.ui-block-194{padding:2px;margin:2px;border-radius:4px}
+.ui-block-195{padding:3px;margin:5px;border-radius:5px}
+.ui-block-196{padding:4px;margin:8px;border-radius:6px}
+.ui-block-197{padding:5px;margin:1px;border-radius:7px}
+.ui-block-198{padding:6px;margin:4px;border-radius:2px}
+.ui-block-199{padding:7px;margin:7px;border-radius:3px}
+.ui-block-200{padding:8px;margin:0px;border-radius:4px}
+.ui-block-201{padding:9px;margin:3px;border-radius:5px}
+.ui-block-202{padding:10px;margin:6px;border-radius:6px}
+.ui-block-203{padding:11px;margin:9px;border-radius:7px}
+.ui-block-204{padding:0px;margin:2px;border-radius:2px}
+.ui-block-205{padding:1px;margin:5px;border-radius:3px}
+.ui-block-206{padding:2px;margin:8px;border-radius:4px}
+.ui-block-207{padding:3px;margin:1px;border-radius:5px}
+.ui-block-208{padding:4px;margin:4px;border-radius:6px}
+.ui-block-209{padding:5px;margin:7px;border-radius:7px}
+.ui-block-210{padding:6px;margin:0px;border-radius:2px}
+.ui-block-211{padding:7px;margin:3px;border-radius:3px}
+.ui-block-212{padding:8px;margin:6px;border-radius:4px}
+.ui-block-213{padding:9px;margin:9px;border-radius:5px}
+.ui-block-214{padding:10px;margin:2px;border-radius:6px}
+.ui-block-215{padding:11px;margin:5px;border-radius:7px}
+.ui-block-216{padding:0px;margin:8px;border-radius:2px}
+.ui-block-217{padding:1px;margin:1px;border-radius:3px}
+.ui-block-218{padding:2px;margin:4px;border-radius:4px}
+.ui-block-219{padding:3px;margin:7px;border-radius:5px}
+.ui-block-220{padding:4px;margin:0px;border-radius:6px}
+.ui-block-221{padding:5px;margin:3px;border-radius:7px}
+.ui-block-222{padding:6px;margin:6px;border-radius:2px}
+.ui-block-223{padding:7px;margin:9px;border-radius:3px}
+.ui-block-224{padding:8px;margin:2px;border-radius:4px}
+.ui-block-225{padding:9px;margin:5px;border-radius:5px}
+.ui-block-226{padding:10px;margin:8px;border-radius:6px}
+.ui-block-227{padding:11px;margin:1px;border-radius:7px}
+.ui-block-228{padding:0px;margin:4px;border-radius:2px}
+.ui-block-229{padding:1px;margin:7px;border-radius:3px}
+.ui-block-230{padding:2px;margin:0px;border-radius:4px}
+.ui-block-231{padding:3px;margin:3px;border-radius:5px}
+.ui-block-232{padding:4px;margin:6px;border-radius:6px}
+.ui-block-233{padding:5px;margin:9px;border-radius:7px}
+.ui-block-234{padding:6px;margin:2px;border-radius:2px}
+.ui-block-235{padding:7px;margin:5px;border-radius:3px}
+.ui-block-236{padding:8px;margin:8px;border-radius:4px}
+.ui-block-237{padding:9px;margin:1px;border-radius:5px}
+.ui-block-238{padding:10px;margin:4px;border-radius:6px}
+.ui-block-239{padding:11px;margin:7px;border-radius:7px}
+.ui-block-240{padding:0px;margin:0px;border-radius:2px}
+.ui-block-241{padding:1px;margin:3px;border-radius:3px}
+.ui-block-242{padding:2px;margin:6px;border-radius:4px}
+.ui-block-243{padding:3px;margin:9px;border-radius:5px}
+.ui-block-244{padding:4px;margin:2px;border-radius:6px}
+.ui-block-245{padding:5px;margin:5px;border-radius:7px}
+.ui-block-246{padding:6px;margin:8px;border-radius:2px}
+.ui-block-247{padding:7px;margin:1px;border-radius:3px}
+.ui-block-248{padding:8px;margin:4px;border-radius:4px}
+.ui-block-249{padding:9px;margin:7px;border-radius:5px}
+.ui-block-250{padding:10px;margin:0px;border-radius:6px}
+.ui-block-251{padding:11px;margin:3px;border-radius:7px}
+.ui-block-252{padding:0px;margin:6px;border-radius:2px}
+.ui-block-253{padding:1px;margin:9px;border-radius:3px}
+.ui-block-254{padding:2px;margin:2px;border-radius:4px}
+.ui-block-255{padding:3px;margin:5px;border-radius:5px}
+.ui-block-256{padding:4px;margin:8px;border-radius:6px}
+.ui-block-257{padding:5px;margin:1px;border-radius:7px}
+.ui-block-258{padding:6px;margin:4px;border-radius:2px}
+.ui-block-259{padding:7px;margin:7px;border-radius:3px}
+.ui-block-260{padding:8px;margin:0px;border-radius:4px}
+.ui-block-261{padding:9px;margin:3px;border-radius:5px}
+.ui-block-262{padding:10px;margin:6px;border-radius:6px}
+.ui-block-263{padding:11px;margin:9px;border-radius:7px}
+.ui-block-264{padding:0px;margin:2px;border-radius:2px}
+.ui-block-265{padding:1px;margin:5px;border-radius:3px}
+.ui-block-266{padding:2px;margin:8px;border-radius:4px}
+.ui-block-267{padding:3px;margin:1px;border-radius:5px}
+.ui-block-268{padding:4px;margin:4px;border-radius:6px}
+.ui-block-269{padding:5px;margin:7px;border-radius:7px}
+.ui-block-270{padding:6px;margin:0px;border-radius:2px}
+.ui-block-271{padding:7px;margin:3px;border-radius:3px}
+.ui-block-272{padding:8px;margin:6px;border-radius:4px}
+.ui-block-273{padding:9px;margin:9px;border-radius:5px}
+.ui-block-274{padding:10px;margin:2px;border-radius:6px}
+.ui-block-275{padding:11px;margin:5px;border-radius:7px}
+.ui-block-276{padding:0px;margin:8px;border-radius:2px}
+.ui-block-277{padding:1px;margin:1px;border-radius:3px}
+.ui-block-278{padding:2px;margin:4px;border-radius:4px}
+.ui-block-279{padding:3px;margin:7px;border-radius:5px}
+.ui-block-280{padding:4px;margin:0px;border-radius:6px}
+.ui-block-281{padding:5px;margin:3px;border-radius:7px}
+.ui-block-282{padding:6px;margin:6px;border-radius:2px}
+.ui-block-283{padding:7px;margin:9px;border-radius:3px}
+.ui-block-284{padding:8px;margin:2px;border-radius:4px}
+.ui-block-285{padding:9px;margin:5px;border-radius:5px}
+.ui-block-286{padding:10px;margin:8px;border-radius:6px}
+.ui-block-287{padding:11px;margin:1px;border-radius:7px}
+.ui-block-288{padding:0px;margin:4px;border-radius:2px}
+.ui-block-289{padding:1px;margin:7px;border-radius:3px}
+.ui-block-290{padding:2px;margin:0px;border-radius:4px}
+.ui-block-291{padding:3px;margin:3px;border-radius:5px}
+.ui-block-292{padding:4px;margin:6px;border-radius:6px}
+.ui-block-293{padding:5px;margin:9px;border-radius:7px}
+.ui-block-294{padding:6px;margin:2px;border-radius:2px}
+.ui-block-295{padding:7px;margin:5px;border-radius:3px}
+.ui-block-296{padding:8px;margin:8px;border-radius:4px}
+.ui-block-297{padding:9px;margin:1px;border-radius:5px}
+.ui-block-298{padding:10px;margin:4px;border-radius:6px}
+.ui-block-299{padding:11px;margin:7px;border-radius:7px}
+.ui-block-300{padding:0px;margin:0px;border-radius:2px}
+.ui-block-301{padding:1px;margin:3px;border-radius:3px}
+.ui-block-302{padding:2px;margin:6px;border-radius:4px}
+.ui-block-303{padding:3px;margin:9px;border-radius:5px}
+.ui-block-304{padding:4px;margin:2px;border-radius:6px}
+.ui-block-305{padding:5px;margin:5px;border-radius:7px}
+.ui-block-306{padding:6px;margin:8px;border-radius:2px}
+.ui-block-307{padding:7px;margin:1px;border-radius:3px}
+.ui-block-308{padding:8px;margin:4px;border-radius:4px}
+.ui-block-309{padding:9px;margin:7px;border-radius:5px}
+.ui-block-310{padding:10px;margin:0px;border-radius:6px}
+.ui-block-311{padding:11px;margin:3px;border-radius:7px}
+.ui-block-312{padding:0px;margin:6px;border-radius:2px}
+.ui-block-313{padding:1px;margin:9px;border-radius:3px}
+.ui-block-314{padding:2px;margin:2px;border-radius:4px}
+.ui-block-315{padding:3px;margin:5px;border-radius:5px}
+.ui-block-316{padding:4px;margin:8px;border-radius:6px}
+.ui-block-317{padding:5px;margin:1px;border-radius:7px}
+.ui-block-318{padding:6px;margin:4px;border-radius:2px}
+.ui-block-319{padding:7px;margin:7px;border-radius:3px}
+.ui-block-320{padding:8px;margin:0px;border-radius:4px}
+.ui-block-321{padding:9px;margin:3px;border-radius:5px}
+.ui-block-322{padding:10px;margin:6px;border-radius:6px}
+.ui-block-323{padding:11px;margin:9px;border-radius:7px}
+.ui-block-324{padding:0px;margin:2px;border-radius:2px}
+.ui-block-325{padding:1px;margin:5px;border-radius:3px}
+.ui-block-326{padding:2px;margin:8px;border-radius:4px}
+.ui-block-327{padding:3px;margin:1px;border-radius:5px}
+.ui-block-328{padding:4px;margin:4px;border-radius:6px}
+.ui-block-329{padding:5px;margin:7px;border-radius:7px}
+.ui-block-330{padding:6px;margin:0px;border-radius:2px}
+.ui-block-331{padding:7px;margin:3px;border-radius:3px}
+.ui-block-332{padding:8px;margin:6px;border-radius:4px}
+.ui-block-333{padding:9px;margin:9px;border-radius:5px}
+.ui-block-334{padding:10px;margin:2px;border-radius:6px}
+.ui-block-335{padding:11px;margin:5px;border-radius:7px}
+.ui-block-336{padding:0px;margin:8px;border-radius:2px}
+.ui-block-337{padding:1px;margin:1px;border-radius:3px}
+.ui-block-338{padding:2px;margin:4px;border-radius:4px}
+.ui-block-339{padding:3px;margin:7px;border-radius:5px}
+.ui-block-340{padding:4px;margin:0px;border-radius:6px}
+.ui-block-341{padding:5px;margin:3px;border-radius:7px}
+.ui-block-342{padding:6px;margin:6px;border-radius:2px}
+.ui-block-343{padding:7px;margin:9px;border-radius:3px}
+.ui-block-344{padding:8px;margin:2px;border-radius:4px}
+.ui-block-345{padding:9px;margin:5px;border-radius:5px}
+.ui-block-346{padding:10px;margin:8px;border-radius:6px}
+.ui-block-347{padding:11px;margin:1px;border-radius:7px}
+.ui-block-348{padding:0px;margin:4px;border-radius:2px}
+.ui-block-349{padding:1px;margin:7px;border-radius:3px}
+.ui-block-350{padding:2px;margin:0px;border-radius:4px}
+.ui-block-351{padding:3px;margin:3px;border-radius:5px}
+.ui-block-352{padding:4px;margin:6px;border-radius:6px}
+.ui-block-353{padding:5px;margin:9px;border-radius:7px}
+.ui-block-354{padding:6px;margin:2px;border-radius:2px}
+.ui-block-355{padding:7px;margin:5px;border-radius:3px}
+.ui-block-356{padding:8px;margin:8px;border-radius:4px}
+.ui-block-357{padding:9px;margin:1px;border-radius:5px}
+.ui-block-358{padding:10px;margin:4px;border-radius:6px}
+.ui-block-359{padding:11px;margin:7px;border-radius:7px}
+.ui-block-360{padding:0px;margin:0px;border-radius:2px}
+.ui-block-361{padding:1px;margin:3px;border-radius:3px}
+.ui-block-362{padding:2px;margin:6px;border-radius:4px}
+.ui-block-363{padding:3px;margin:9px;border-radius:5px}
+.ui-block-364{padding:4px;margin:2px;border-radius:6px}
+.ui-block-365{padding:5px;margin:5px;border-radius:7px}
+.ui-block-366{padding:6px;margin:8px;border-radius:2px}
+.ui-block-367{padding:7px;margin:1px;border-radius:3px}
+.ui-block-368{padding:8px;margin:4px;border-radius:4px}
+.ui-block-369{padding:9px;margin:7px;border-radius:5px}
+.ui-block-370{padding:10px;margin:0px;border-radius:6px}
+.ui-block-371{padding:11px;margin:3px;border-radius:7px}
+.ui-block-372{padding:0px;margin:6px;border-radius:2px}
+.ui-block-373{padding:1px;margin:9px;border-radius:3px}
+.ui-block-374{padding:2px;margin:2px;border-radius:4px}
+.ui-block-375{padding:3px;margin:5px;border-radius:5px}
+.ui-block-376{padding:4px;margin:8px;border-radius:6px}
+.ui-block-377{padding:5px;margin:1px;border-radius:7px}
+.ui-block-378{padding:6px;margin:4px;border-radius:2px}
+.ui-block-379{padding:7px;margin:7px;border-radius:3px}
+.ui-block-380{padding:8px;margin:0px;border-radius:4px}
+.ui-block-381{padding:9px;margin:3px;border-radius:5px}
+.ui-block-382{padding:10px;margin:6px;border-radius:6px}
+.ui-block-383{padding:11px;margin:9px;border-radius:7px}
+.ui-block-384{padding:0px;margin:2px;border-radius:2px}
+.ui-block-385{padding:1px;margin:5px;border-radius:3px}
+.ui-block-386{padding:2px;margin:8px;border-radius:4px}
+.ui-block-387{padding:3px;margin:1px;border-radius:5px}
+.ui-block-388{padding:4px;margin:4px;border-radius:6px}
+.ui-block-389{padding:5px;margin:7px;border-radius:7px}
+.ui-block-390{padding:6px;margin:0px;border-radius:2px}
+.ui-block-391{padding:7px;margin:3px;border-radius:3px}
+.ui-block-392{padding:8px;margin:6px;border-radius:4px}
+.ui-block-393{padding:9px;margin:9px;border-radius:5px}
+.ui-block-394{padding:10px;margin:2px;border-radius:6px}
+.ui-block-395{padding:11px;margin:5px;border-radius:7px}
+.ui-block-396{padding:0px;margin:8px;border-radius:2px}
+.ui-block-397{padding:1px;margin:1px;border-radius:3px}
+.ui-block-398{padding:2px;margin:4px;border-radius:4px}
+.ui-block-399{padding:3px;margin:7px;border-radius:5px}
+.ui-block-400{padding:4px;margin:0px;border-radius:6px}
+.ui-block-401{padding:5px;margin:3px;border-radius:7px}
+.ui-block-402{padding:6px;margin:6px;border-radius:2px}
+.ui-block-403{padding:7px;margin:9px;border-radius:3px}
+.ui-block-404{padding:8px;margin:2px;border-radius:4px}
+.ui-block-405{padding:9px;margin:5px;border-radius:5px}
+.ui-block-406{padding:10px;margin:8px;border-radius:6px}
+.ui-block-407{padding:11px;margin:1px;border-radius:7px}
+.ui-block-408{padding:0px;margin:4px;border-radius:2px}
+.ui-block-409{padding:1px;margin:7px;border-radius:3px}
+.ui-block-410{padding:2px;margin:0px;border-radius:4px}
+.ui-block-411{padding:3px;margin:3px;border-radius:5px}
+.ui-block-412{padding:4px;margin:6px;border-radius:6px}
+.ui-block-413{padding:5px;margin:9px;border-radius:7px}
+.ui-block-414{padding:6px;margin:2px;border-radius:2px}
+.ui-block-415{padding:7px;margin:5px;border-radius:3px}
+.ui-block-416{padding:8px;margin:8px;border-radius:4px}
+.ui-block-417{padding:9px;margin:1px;border-radius:5px}
+.ui-block-418{padding:10px;margin:4px;border-radius:6px}
+.ui-block-419{padding:11px;margin:7px;border-radius:7px}
+.ui-block-420{padding:0px;margin:0px;border-radius:2px}
+.ui-block-421{padding:1px;margin:3px;border-radius:3px}
+.ui-block-422{padding:2px;margin:6px;border-radius:4px}
+.ui-block-423{padding:3px;margin:9px;border-radius:5px}
+.ui-block-424{padding:4px;margin:2px;border-radius:6px}
+.ui-block-425{padding:5px;margin:5px;border-radius:7px}
+.ui-block-426{padding:6px;margin:8px;border-radius:2px}
+.ui-block-427{padding:7px;margin:1px;border-radius:3px}
+.ui-block-428{padding:8px;margin:4px;border-radius:4px}
+.ui-block-429{padding:9px;margin:7px;border-radius:5px}
+.ui-block-430{padding:10px;margin:0px;border-radius:6px}
+.ui-block-431{padding:11px;margin:3px;border-radius:7px}
+.ui-block-432{padding:0px;margin:6px;border-radius:2px}
+.ui-block-433{padding:1px;margin:9px;border-radius:3px}
+.ui-block-434{padding:2px;margin:2px;border-radius:4px}
+.ui-block-435{padding:3px;margin:5px;border-radius:5px}
+.ui-block-436{padding:4px;margin:8px;border-radius:6px}
+.ui-block-437{padding:5px;margin:1px;border-radius:7px}
+.ui-block-438{padding:6px;margin:4px;border-radius:2px}
+.ui-block-439{padding:7px;margin:7px;border-radius:3px}
+.ui-block-440{padding:8px;margin:0px;border-radius:4px}
+.ui-block-441{padding:9px;margin:3px;border-radius:5px}
+.ui-block-442{padding:10px;margin:6px;border-radius:6px}
+.ui-block-443{padding:11px;margin:9px;border-radius:7px}
+.ui-block-444{padding:0px;margin:2px;border-radius:2px}
+.ui-block-445{padding:1px;margin:5px;border-radius:3px}
+.ui-block-446{padding:2px;margin:8px;border-radius:4px}
+.ui-block-447{padding:3px;margin:1px;border-radius:5px}
+.ui-block-448{padding:4px;margin:4px;border-radius:6px}
+.ui-block-449{padding:5px;margin:7px;border-radius:7px}
+.ui-block-450{padding:6px;margin:0px;border-radius:2px}
+.ui-block-451{padding:7px;margin:3px;border-radius:3px}
+.ui-block-452{padding:8px;margin:6px;border-radius:4px}
+.ui-block-453{padding:9px;margin:9px;border-radius:5px}
+.ui-block-454{padding:10px;margin:2px;border-radius:6px}
+.ui-block-455{padding:11px;margin:5px;border-radius:7px}
+.ui-block-456{padding:0px;margin:8px;border-radius:2px}
+.ui-block-457{padding:1px;margin:1px;border-radius:3px}
+.ui-block-458{padding:2px;margin:4px;border-radius:4px}
+.ui-block-459{padding:3px;margin:7px;border-radius:5px}
+.ui-block-460{padding:4px;margin:0px;border-radius:6px}
+.ui-block-461{padding:5px;margin:3px;border-radius:7px}
+.ui-block-462{padding:6px;margin:6px;border-radius:2px}
+.ui-block-463{padding:7px;margin:9px;border-radius:3px}
+.ui-block-464{padding:8px;margin:2px;border-radius:4px}
+.ui-block-465{padding:9px;margin:5px;border-radius:5px}
+.ui-block-466{padding:10px;margin:8px;border-radius:6px}
+.ui-block-467{padding:11px;margin:1px;border-radius:7px}
+.ui-block-468{padding:0px;margin:4px;border-radius:2px}
+.ui-block-469{padding:1px;margin:7px;border-radius:3px}
+.ui-block-470{padding:2px;margin:0px;border-radius:4px}
+.ui-block-471{padding:3px;margin:3px;border-radius:5px}
+.ui-block-472{padding:4px;margin:6px;border-radius:6px}
+.ui-block-473{padding:5px;margin:9px;border-radius:7px}
+.ui-block-474{padding:6px;margin:2px;border-radius:2px}
+.ui-block-475{padding:7px;margin:5px;border-radius:3px}
+.ui-block-476{padding:8px;margin:8px;border-radius:4px}
+.ui-block-477{padding:9px;margin:1px;border-radius:5px}
+.ui-block-478{padding:10px;margin:4px;border-radius:6px}
+.ui-block-479{padding:11px;margin:7px;border-radius:7px}
+.ui-block-480{padding:0px;margin:0px;border-radius:2px}
+.ui-block-481{padding:1px;margin:3px;border-radius:3px}
+.ui-block-482{padding:2px;margin:6px;border-radius:4px}
+.ui-block-483{padding:3px;margin:9px;border-radius:5px}
+.ui-block-484{padding:4px;margin:2px;border-radius:6px}
+.ui-block-485{padding:5px;margin:5px;border-radius:7px}
+.ui-block-486{padding:6px;margin:8px;border-radius:2px}
+.ui-block-487{padding:7px;margin:1px;border-radius:3px}
+.ui-block-488{padding:8px;margin:4px;border-radius:4px}
+.ui-block-489{padding:9px;margin:7px;border-radius:5px}
+.ui-block-490{padding:10px;margin:0px;border-radius:6px}
+.ui-block-491{padding:11px;margin:3px;border-radius:7px}
+.ui-block-492{padding:0px;margin:6px;border-radius:2px}
+.ui-block-493{padding:1px;margin:9px;border-radius:3px}
+.ui-block-494{padding:2px;margin:2px;border-radius:4px}
+.ui-block-495{padding:3px;margin:5px;border-radius:5px}
+.ui-block-496{padding:4px;margin:8px;border-radius:6px}
+.ui-block-497{padding:5px;margin:1px;border-radius:7px}
+.ui-block-498{padding:6px;margin:4px;border-radius:2px}
+.ui-block-499{padding:7px;margin:7px;border-radius:3px}
+.ui-block-500{padding:8px;margin:0px;border-radius:4px}
