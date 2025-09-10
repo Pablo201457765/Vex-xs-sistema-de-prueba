@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vex XS - UltimatePlus Beta 3</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<audio id="bootAudio" src="arranque.mp3" preload="auto"></audio>
+<section id="boot" class="screen active"><div class="boot-inner"><div class="logo">V</div><div id="bootName" class="hidden">Vex XS</div><div id="bootDots" class="dots hidden"><span>.</span><span>.</span><span>.</span></div></div></section>
+<section id="lock" class="screen hidden"><div class="status top"><div class="left" id="status-left">Operador</div><div class="right"><span id="lockTime">00:00</span> <img src="icono_bateria.png" id="batteryIcon" class="status-icon" alt="Bateria"></div></div><div class="lock-center"><div id="lockClock" class="big-time">00:00</div><div id="lockDate" class="date">—</div><div class="hint">Desliza hacia arriba para desbloquear</div></div></section>
+<section id="home" class="screen hidden"><div class="status top"><div class="left" id="home-left">Vex XS</div><div class="right"><span id="homeTime">00:00</span> <img src="icono_bateria.png" id="homeBattery" class="status-icon" alt="Bateria"></div></div>
+<main id="grid" class="grid"><div class="apps-row" id="appsRow"></div></main>
+<nav id="dock" class="dock"><button class="dock-btn" data-app="telefono"><img class="dock-icon" src="icono_telefono.png" alt="Tel"></button><button class="dock-btn" data-app="galeria"><img class="dock-icon" src="icono_galeria.png" alt="Gal"></button><button class="dock-btn" data-app="mensajes"><img class="dock-icon" src="icono_mensajes.png" alt="Msg"></button><button class="dock-btn" data-app="navegador"><img class="dock-icon" src="icono_navegador.png" alt="Nav"></button></nav></section>
+<section id="appWindow" class="overlay hidden"><div id="appContent" class="app-content"></div><button id="appClose" class="app-close">⬆</button></section>
+<template id="configTpl"><div class="config-page"><h2>Configuración</h2><div class="cfg-row"><label>Vibración: <input id="vibToggle" type="checkbox"></label></div><div class="cfg-row"><label>Estilo íconos: <select id="iconStyle"><option value="circle">Circular</option><option value="rounded">Redondeado</option><option value="square">Cuadrado</option></select></label></div><div class="cfg-row"><button id="btnChangeBg">Cambiar fondo (Inicio/Bloqueo)</button><p class="muted">Seleccioná una imagen y se guardará en el dispositivo.</p></div><div class="cfg-row"><button id="btnReboot">Reiniciar para aplicar</button></div></div></template>
+<script src="script.js"></script></body></html>
