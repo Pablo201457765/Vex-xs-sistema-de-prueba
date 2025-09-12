@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Vex XS UltimatePlus 4.3</title>
+<link rel="stylesheet" href="style.css"/></head>
+<body>
+<section id="boot" class="screen active"><div class="boot-inner"><div class="boot-frame"><video id="bootVideo" autoplay muted playsinline><source src="boot.mp4" type="video/mp4">Tu navegador no soporta video.</video></div><div class="muted">Cargando Vex XS...</div></div></section>
+<section id="lock" class="screen hidden"><div class="lock-inner"><div id="lockClock" class="big-time">00:00</div><div id="lockDate" class="date">—</div><div class="hint">Desliza hacia arriba para desbloquear</div></div></section>
+<section id="home" class="screen hidden"><main class="grid"><div class="welcome">Bienvenido a Vex XS</div></main>
+<nav id="dock" class="dock"><button class="dock-btn" data-app="telefono"><img src="telefono.png" alt="Teléfono" class="dock-icon"></button><button class="dock-btn" data-app="mensajes"><img src="mensajes.png" alt="Mensajes" class="dock-icon"></button><button class="dock-btn" data-app="galeria"><img src="galeria.png" alt="Galería" class="dock-icon"></button><button class="dock-btn" data-app="navegador"><img src="navegador.png" alt="Navegador" class="dock-icon"></button></nav>
+</section>
+<section id="appWindow" class="overlay hidden"><div id="appContent" class="app-content" tabindex="0"></div></section>
+<div id="homeGesture" class="home-gesture"></div>
+<script src="script.js"></script></body></html>
