@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>Vex XS — UltimatePlus Beta 4.2 (Heavy Code)</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- BOOT (video-centered "television" style) -->
+<section id="boot" class="screen active" aria-hidden="false">
+  <div class="boot-inner">
+    <div class="boot-frame">
+      <video id="bootVideo" playsinline autoplay muted>
+        <source src="boot.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+    <div id="bootStatus" class="muted">Cargando Vex XS...</div>
+  </div>
+</section>
+
+<!-- LOCKSCREEN -->
+<section id="lock" class="screen hidden" aria-hidden="true">
+  <header class="status top">
+    <div class="left" id="carrier">Operador</div>
+    <div class="right"><span id="batteryText">100%</span></div>
+  </header>
+  <main class="lock-main">
+    <div id="lockClock" class="big-time">00:00</div>
+    <div id="lockDate" class="date">—</div>
+    <div class="hint">Desliza hacia arriba para desbloquear</div>
+  </main>
+</section>
+
+<!-- HOME -->
+<section id="home" class="screen hidden" aria-hidden="true">
+  <header class="status top">
+    <div class="left">Vex XS</div>
+    <div class="right"><span id="homeTime">00:00</span></div>
+  </header>
+  <main id="mainGrid" class="grid">
+    <div id="widgets" class="widgets"></div>
+    <div class="apps-row" id="appsRow"></div>
+  </main>
+</section>
+
+<!-- APP WINDOW: must cover full viewport when opened -->
+<section id="appWindow" class="overlay hidden" aria-hidden="true">
+  <div id="appContent" class="app-content" tabindex="0" role="document"></div>
+</section>
+
+<!-- BOTTOM DOCK: exactly 4 favorites -->
+<nav id="dock" class="dock" aria-hidden="false">
+  <button class="dock-btn" data-app="telefono" title="Teléfono"><img class="dock-icon" src="telefono.png" alt="Teléfono"></button>
+  <button class="dock-btn" data-app="mensajes" title="Mensajes"><img class="dock-icon" src="mensajes.png" alt="Mensajes"></button>
+  <button class="dock-btn" data-app="galeria" title="Galería"><img class="dock-icon" src="galeria.png" alt="Galería"></button>
+  <button class="dock-btn" data-app="navegador" title="Navegador"><img class="dock-icon" src="navegador.png" alt="Navegador"></button>
+</nav>
+
+<!-- iPhone-style gesture bar (hidden during boot) -->
+<div id="homeGesture" class="home-gesture" aria-hidden="false"></div>
+
+<!-- Config template (kept simple but functional) -->
+<template id="configTpl">
+  <div class="config-page">
+    <h2>Configuración</h2>
+    <div class="cfg-row"><label>Vibración: <input id="vibToggle" type="checkbox"></label></div>
+    <div class="cfg-row"><label>Animación (velocidad): 
+      <select id="animSpeed"><option value="0.7">Lenta</option><option value="1" selected>Normal</option><option value="1.6">Rápida</option></select>
+    </label></div>
+    <div class="cfg-row"><button id="btnChangeBg">Cambiar fondo (Inicio/Bloqueo)</button></div>
+  </div>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
