@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>Vex XS — UltimatePlus Beta 4.6</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<section id="boot" class="screen active">
+  <div class="boot-inner">
+    <div class="logo">V</div>
+    <div class="bootStatus">Iniciando Vex XS...</div>
+  </div>
+</section>
+
+<section id="lock" class="screen hidden">
+  <div class="lock-inner">
+    <div id="lockClock" class="big-time">00:00</div>
+    <div id="lockDate" class="date">—</div>
+    <div class="hint">Desliza hacia arriba para desbloquear</div>
+  </div>
+</section>
+
+<section id="home" class="screen hidden">
+  <header class="status top">
+    <div class="left">Vex XS</div>
+    <div class="right"><span id="homeTime">00:00</span></div>
+  </header>
+
+  <main id="mainGrid" class="grid">
+    <div class="apps-row" id="appsRow"></div>
+  </main>
+
+  <nav id="dock" class="dock" aria-hidden="false">
+    <button class="dock-btn" data-app="camara" title="Cámara"><img class="dock-icon" src="camara.png" alt="Cámara"></button>
+    <button class="dock-btn" data-app="galeria" title="Galería"><img class="dock-icon" src="galeria.png" alt="Galería"></button>
+    <button class="dock-btn" data-app="notas" title="Notas"><img class="dock-icon" src="notas.png" alt="Notas"></button>
+    <button class="dock-btn" data-app="navegador" title="Navegador"><img class="dock-icon" src="navegador.png" alt="Navegador"></button>
+  </nav>
+</section>
+
+<section id="appWindow" class="overlay hidden">
+  <div id="appContent" class="app-content" tabindex="0"></div>
+</section>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<input id="filePicker" type="file" accept="image/*" style="display:none" />
+
+<template id="tpl-config">
+  <div class="cfg">
+    <h2>Ajustes</h2>
+    <div class="opt" data-key="about"><img src="configuracion.png" onerror="imgFallback(this)"><div class="lbl">Sobre el teléfono</div><div class="arrow">›</div></div>
+    <div class="opt" data-key="lang"><img src="idiomas.png" onerror="imgFallback(this)"><div class="lbl">Idiomas</div><div class="arrow">›</div></div>
+    <div class="opt" data-key="wall"><img src="fondo.png" onerror="imgFallback(this)"><div class="lbl">Fondo de pantalla</div><div class="arrow">›</div></div>
+    <div class="opt" data-key="style"><img src="estilo.png" onerror="imgFallback(this)"><div class="lbl">Altura y estilo</div><div class="arrow">›</div></div>
+  </div>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
