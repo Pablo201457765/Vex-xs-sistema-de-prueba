@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>VEX XS Ultimate Plus 4.9 — Real</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- GSAP CDN para animaciones (se usa desde el HTML) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div id="boot" class="screen">
+    <canvas id="bootCanvas"></canvas>
+    <div id="bootOverlay">
+      <div id="bootV">V</div>
+      <div id="bootName">VEX XS</div>
+      <div id="bootDots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <div id="lock" class="screen hidden">
+    <div id="time">12:00</div>
+    <div id="date">Lunes, 15 Septiembre 2025</div>
+    <div id="unlockTip">⬆ Desliza para desbloquear</div>
+  </div>
+
+  <div id="home" class="screen hidden">
+    <header class="topbar"><div class="brand">VEX XS</div><div class="ver">Ultimate 4.9</div></header>
+    <main id="grid" class="grid"></main>
+    <div class="favbar" id="favbar"></div>
+  </div>
+
+  <div id="appWindow" class="appWindow hidden" role="dialog"></div>
+
+  <!-- main compiled JS (module) -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
