@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Vex XS Ultimate Plus 5.1</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <!-- START SCREEN (waits for user) -->
+  <div id="startScreen" class="screen start-screen">
+    <div class="brand">Vex XS</div>
+    <div class="subtitle">Ultimate Plus 5.1</div>
+    <button id="startBtn" class="circle-btn">Click</button>
+    <p id="hint" class="hint">Presione el botón para que inicie la pantalla de arranque.<br>Le damos la bienvenida a Vex XS Ultimate 5.1</p>
+  </div>
+
+  <!-- VIDEO BOOT (hidden until user clicks) -->
+  <div id="videoContainer" class="screen hidden">
+    <video id="bootVideo" playsinline preload="auto"></video>
+    <div id="bootOverlay" class="boot-overlay">
+      <div id="bootV">V</div>
+      <div id="bootName">Vex XS</div>
+      <div id="bootDots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- WebGL fallback canvas -->
+  <div id="webglContainer" class="screen hidden">
+    <canvas id="bootCanvas"></canvas>
+    <div class="boot-overlay small"><div id="bootV2">V</div><div id="bootName2">Vex XS</div></div>
+  </div>
+
+  <!-- LOCK SCREEN -->
+  <div id="lockScreen" class="screen hidden lock-screen">
+    <div id="time" class="time">--:--</div>
+    <div id="date" class="date">--</div>
+    <div class="swipe">⬆ Desliza para desbloquear</div>
+  </div>
+
+  <!-- HOME (grid & favbar) -->
+  <div id="homeScreen" class="screen hidden home-screen">
+    <header class="topbar"><div class="brand-mini">Vex XS</div><div class="ver">Ultimate 5.1</div></header>
+    <main id="grid" class="grid"></main>
+    <div id="favbar" class="favbar"></div>
+  </div>
+
+  <!-- App window overlay -->
+  <div id="appWindow" class="appWindow hidden" role="dialog" aria-hidden="true"></div>
+
+  <script>
+    // Prevent accidental autoplay on page load and hint if no interaction
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // nothing here; main.js handles boot flow
+    });
+  </script>
+</body>
+</html>

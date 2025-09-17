@@ -1,0 +1,9 @@
+{
+  "name":"Vex XS Ultimate Plus 5.1",
+  "short_name":"VexXS",
+  "start_url":".",
+  "display":"standalone",
+  "background_color":"#06121a",
+  "theme_color":"#39d1a5",
+  "icons":[{"src":"icono.png","sizes":"512x512","type":"image/png"}]
+}
