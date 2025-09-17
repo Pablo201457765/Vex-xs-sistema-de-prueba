@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>VEX XS — ULTIMATE PLUS 5.0</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <div id="startScreen" class="screen start-screen">
+    <div class="brand">VEX XS</div>
+    <div class="subtitle">Ultimate Plus 5.0</div>
+    <button id="startBtn" class="circle-btn">Click</button>
+  </div>
+
+  <div id="bootScreen" class="screen hidden">
+    <video id="bootVideo" playsinline preload="auto">
+      <source src="boot.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+    <div id="bootOverlay" class="boot-overlay">
+      <div id="bootV">V</div>
+      <div id="bootName">VEX XS</div>
+      <div id="bootDots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <div id="lock" class="screen hidden lock-screen">
+    <div id="time" class="time">12:00</div>
+    <div id="date" class="date">Lunes, 15 Septiembre 2025</div>
+    <div class="swipe">⬆ Desliza para desbloquear</div>
+  </div>
+
+  <div id="home" class="screen hidden home-screen">
+    <header class="topbar"><div class="brand-mini">VEX XS</div><div class="ver">Ultimate 5.0</div></header>
+    <main id="grid" class="grid"></main>
+    <div id="favbar" class="favbar"></div>
+  </div>
+
+  <div id="appWindow" class="appWindow hidden" role="dialog" aria-hidden="true"></div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
