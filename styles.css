@@ -1,0 +1,17 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;color:#fff;font-family:Inter,Roboto,Arial,Helvetica,sans-serif}
+.screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hidden{display:none}
+#webglRoot{position:absolute;inset:0;background:#000}
+#bootOverlay{position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;gap:18px}
+#logoText{font-size:120px;font-weight:700;letter-spacing:6px}
+#fullName{font-size:28px;transition:opacity .6s ease}
+#dots{display:flex;gap:12px;margin-top:12px}
+.dot{width:12px;height:12px;border-radius:50%;background:#333;box-shadow:0 0 6px rgba(0,0,0,0.8);transition:background .3s ease, box-shadow .3s ease}
+.lockContent{display:flex;flex-direction:column;align-items:center;gap:18px}
+button{padding:10px 18px;border-radius:8px;border:none;background:#0aa; color:#fff;font-weight:600}
+@media (max-width:420px){
+  #logoText{font-size:84px}
+  #fullName{font-size:20px}
+}
