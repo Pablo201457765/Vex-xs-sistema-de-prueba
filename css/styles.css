@@ -1,0 +1,42 @@
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto,'Noto Sans',sans-serif;margin:0;padding:0}
+:root{--bg:#0b1020;--accent:#21a1ff;--glass:rgba(255,255,255,0.06)}
+body,html,#app-root{height:100%}
+.screen{display:none;height:100vh;width:100vw;overflow:hidden;position:fixed;top:0;left:0}
+.screen.visible{display:block}
+#boot-screen{background:#000;display:flex;align-items:center;justify-content:center}
+#boot-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#boot-overlay{position:relative;z-index:2;text-align:center;color:#fff}
+#boot-logo{font-size:86px;font-weight:800;letter-spacing:2px}
+#boot-name{font-size:28px;margin-top:6px;opacity:0.9}
+#boot-dots{margin-top:10px}
+#boot-dots span{display:inline-block;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);margin:0 6px;animation:blink 1.6s infinite}
+#boot-dots span:nth-child(2){animation-delay:.12s}#boot-dots span:nth-child(3){animation-delay:.24s}
+@keyframes blink{0%{transform:translateY(0);opacity:.3}50%{transform:translateY(-6px);opacity:1}100%{transform:translateY(0);opacity:.3}}
+
+#lock-screen{background:linear-gradient(180deg,#051026,#07102b);color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.lock-content{transform:translateY(-10%);text-align:center}
+#time{font-size:64px;font-weight:600}
+#date{margin-top:6px;opacity:.85}
+.swipe-hint{margin-top:24px;opacity:.8;font-size:14px}
+.gesture-bar{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);width:120px;height:6px;background:rgba(255,255,255,0.08);border-radius:999px}
+
+#home-screen{background:linear-gradient(180deg,#07102b,#071141);color:#fff;padding:18px 12px 90px 12px;display:flex;flex-direction:column}
+.status-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:600;opacity:.95}
+#grid{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:12px}
+.app-card{background:var(--glass);border-radius:16px;padding:14px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.app-card img{width:56px;height:56px;border-radius:50%}
+.app-card span{display:block;margin-top:8px;font-size:12px}
+
+#favbar{position:fixed;left:50%;transform:translateX(-50%);bottom:30px;background:rgba(255,255,255,0.03);padding:8px;border-radius:999px;display:flex;gap:14px;backdrop-filter:blur(6px)}
+#favbar .app-btn{background:transparent;border:0;padding:6px 10px;border-radius:999px;color:#fff;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+#favbar img{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.04);padding:6px}
+
+#app-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:flex-start;justify-content:center;padding-top:56px;z-index:50}
+#app-shell{background:#fff;color:#000;width:94%;max-width:720px;height:86%;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+#app-header{height:56px;background:#f6f6f6;display:flex;align-items:center;padding:0 12px;gap:12px;border-bottom:1px solid #eee}
+#app-content{flex:1;padding:18px;overflow:auto}
+#back-btn{background:transparent;border:0;font-size:20px;cursor:pointer}
+
+.hidden{display:none !important}
+
+@media (min-width:720px){#boot-logo{font-size:120px}#time{font-size:84px}}
