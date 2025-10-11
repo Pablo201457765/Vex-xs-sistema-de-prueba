@@ -1,0 +1,257 @@
+/* Contenedor de Apps */
+.app-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+/* Ventana de App */
+.app-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center;
+    pointer-events: all;
+    transition: none;
+}
+
+/* Animación de apertura moderna (desde ícono) */
+.app-window.opening {
+    animation: appOpenModern 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes appOpenModern {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+        border-radius: 30px;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 0;
+    }
+}
+
+/* Animación de cierre moderna (hacia ícono) */
+.app-window.closing {
+    animation: appCloseModern 0.35s cubic-bezier(0.36, 0, 0.66, -0.56) forwards;
+}
+
+@keyframes appCloseModern {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 0;
+    }
+    30% {
+        opacity: 1;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3);
+        border-radius: 30px;
+    }
+}
+
+/* Header de App */
+.app-header {
+    height: 60px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    flex-shrink: 0;
+}
+
+.app-back {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s;
+    font-size: 1.5rem;
+}
+
+.app-back:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.app-back:active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.app-menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s;
+    font-size: 1.3rem;
+}
+
+.app-menu:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Contenido de App */
+.app-content {
+    flex: 1;
+    overflow-y: auto;
+    background: #fff;
+    padding: 20px;
+}
+
+/* Indicador de gestos (barra inferior) */
+.gesture-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.gesture-bar {
+    width: 120px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+/* Overlay cuando hay ventanas apiladas */
+.app-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.app-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Configuración - Lista de opciones */
+.settings-list {
+    list-style: none;
+}
+
+.settings-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.settings-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.settings-item:active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.settings-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 12px;
+}
+
+.settings-info {
+    flex: 1;
+}
+
+.settings-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.settings-value {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.settings-arrow {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Botones de acción */
+.action-button {
+    padding: 12px 24px;
+    background: #667eea;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.action-button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+/* Input de archivos oculto */
+input[type="file"] {
+    display: none;
+}

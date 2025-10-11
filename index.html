@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Vex XS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootscreen.css">
+    <link rel="stylesheet" href="css/lockscreen.css">
+    <link rel="stylesheet" href="css/homescreen.css">
+    <link rel="stylesheet" href="css/apps.css">
+</head>
+<body>
+    <!-- Pantalla de Arranque -->
+    <div id="bootScreen" class="boot-screen active">
+        <div class="boot-content">
+            <h1 class="system-name">VEX XS</h1>
+            <p class="company-name">SystemXS</p>
+            <div class="loading-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Bloqueo -->
+    <div id="lockScreen" class="lock-screen">
+        <div class="lock-wallpaper" id="lockWallpaper"></div>
+        <div class="lock-content">
+            <div class="lock-time" id="lockTime">15:02</div>
+            <div class="lock-date" id="lockDate">Viernes, 10 de octubre</div>
+            <div class="lock-unlock">
+                <div class="unlock-icon">🔒</div>
+                <p>Desliza para desbloquear</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Inicio -->
+    <div id="homeScreen" class="home-screen">
+        <div class="home-wallpaper" id="homeWallpaper"></div>
+        
+        <!-- Barra de estado -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span id="statusTime">15:02</span>
+            </div>
+            <div class="status-right">
+                <span class="status-icon">📶</span>
+                <span class="status-icon">📡</span>
+                <span class="status-icon">🔋</span>
+            </div>
+        </div>
+
+        <!-- Grid de Apps -->
+        <div class="apps-grid" id="appsGrid">
+            <!-- Apps se generarán dinámicamente -->
+        </div>
+
+        <!-- Dock -->
+        <div class="dock">
+            <div class="dock-app" data-app="camera">
+                <div class="app-icon">📷</div>
+            </div>
+            <div class="dock-app" data-app="browser">
+                <div class="app-icon">🌐</div>
+            </div>
+            <div class="dock-app" data-app="notes">
+                <div class="app-icon">📝</div>
+            </div>
+            <div class="dock-app" data-app="phone">
+                <div class="app-icon">📞</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de Apps -->
+    <div id="appContainer" class="app-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/bootscreen.js"></script>
+    <script src="js/lockscreen.js"></script>
+    <script src="js/homescreen.js"></script>
+    <script src="js/apps.js"></script>
+    <script src="js/gestures.js"></script>
+</body>
+</html>
